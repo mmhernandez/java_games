@@ -9,7 +9,7 @@
 </head>
 <body>
 
-	<a href="">Play HueText</a>
+	<a href="">Play ColorText</a>
 	<p>Test your brain power in this game of mixed up colors and text!</p>
 
 </body>
