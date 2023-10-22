@@ -1,16 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Games</title>
+	<title>Color Text</title>
 </head>
 <body>
 
-	<a href="/colortext">Play ColorText</a>
-	<p>Test your brain power in this game of mixed up colors and text!</p>
+	<h1><c:out value="instructions"></c:out></h1>
 
 </body>
 </html>
