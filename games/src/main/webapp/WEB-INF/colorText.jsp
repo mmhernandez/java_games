@@ -10,7 +10,8 @@
 </head>
 <body>
 
-	<h1><c:out value="instructions"></c:out></h1>
+	<h1>Instructions</h1>
+	<p><c:out value="${instructions}"/></p>
 
 </body>
 </html>
