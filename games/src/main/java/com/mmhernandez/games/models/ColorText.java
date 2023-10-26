@@ -20,7 +20,8 @@ public class ColorText {
 				"green",
 				"gray",
 				"brown",
-				"pink"
+				"pink",
+				"orange"
 		};
 		String[] colorCodeList = {
 				"FFEF11", // yellow
@@ -32,6 +33,7 @@ public class ColorText {
 				"A5A5A5", // gray
 				"994C00", // brown
 				"FF3399", // pink
+				"F75C12"  // orange 
 		};
 		
 		Random rand = new Random();

@@ -7,11 +7,17 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Color Text</title>
+	<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
 </head>
 <body>
 
 	<h1>Instructions</h1>
 	<p><c:out value="${instructions}"/></p>
-
+	<a href="/play" class="btn btn-primary">Play!</a>
+	
+	<c:forEach var="colorText" items="${gameSet}">
+		<c:out value="${colorText.text}"/>
+	</c:forEach>
+	
 </body>
 </html>
