@@ -31,19 +31,24 @@ public class ColorTextController {
 	@GetMapping("/play") 
 	public String playGame(HttpSession session,
 			Model model) {
-		ArrayList<ColorText> gameSet = new ArrayList<ColorText>();
-		
-		// populate the gameSet array with randomized ColorText objects
-//		int[] numbers = IntStream.rangeClosed(0, 9).toArray();
-//		Random rand = new Random();
-		
-		for(int i=0; i<10; i++) {
-			gameSet.add(colorTextService.getNewColorText());
+		if(session.getAttribute("gameSet") == null) {
+			ArrayList<ColorText> gameSet = new ArrayList<ColorText>();
+			
+			for(int i=0; i<10; i++) {
+				gameSet.add(colorTextService.getNewColorText());
+			}
+			session.setAttribute("gameSet", gameSet);
 		}
 		
-		session.setAttribute("gameSet", gameSet);
+		
 		
 		return "colorText.jsp";
+	}
+	
+	@GetMapping("/cancel")
+	public String cancelGame(HttpSession session) {
+		session.invalidate();
+		return "redirect:/colortext";
 	}
 	
 }

@@ -24,16 +24,16 @@ public class ColorText {
 				"orange"
 		};
 		String[] colorCodeList = {
-				"FFEF11", // yellow
-				"1121FF", // blue
-				"FF1111", // red
-				"000000", // black
-				"A049E2", // purple
-				"009900", // green
-				"A5A5A5", // gray
-				"994C00", // brown
-				"FF3399", // pink
-				"F75C12"  // orange 
+				"#ebdc32", // yellow
+				"#3288bd", // blue
+				"#ea2210", // red
+				"#2d2d2d", // black
+				"#9461d4", // purple
+				"#29a628", // green
+				"#b1b1b1", // gray
+				"#9a5c04", // brown
+				"#ef88b3", // pink
+				"#ff8306"  // orange 
 		};
 		
 		Random rand = new Random();
