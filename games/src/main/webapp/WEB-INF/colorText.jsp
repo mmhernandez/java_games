@@ -21,7 +21,7 @@
 	<main class="mt-5">
 		<c:forEach var="colorText" items="${gameSet}">
 			<p><c:out value="${colorText.text} & ${colorText.colorCode}" /></p>
-			<p style="color: ${colorText.colorCode};" class="display-3 fw-bold"><c:out value="${colorText.text}" /></p>
+			<p style="color: #${colorText.colorCode};" class="display-3 fw-bold"><c:out value="${colorText.text}" /></p>
 			</br>
 		</c:forEach>
 	</main>
