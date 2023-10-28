@@ -1,48 +1,59 @@
 package com.mmhernandez.games.models;
 
+import java.util.HashMap;
 import java.util.Random;
 
 public class ColorText {
 	
 	private String text;
-	private String colorCode;
+	private String textColorCode;
+	private String altcolorCode;
 	
 	
 	
 //	CONSTRUCTOR
 	public ColorText() {
-		String[] colorTextList = {
-				"yellow",
-				"blue",
-				"red",
-				"black",
-				"purple",
-				"green",
-				"gray",
-				"brown",
-				"pink",
-				"orange"
-		};
-		String[] colorCodeList = {
-				"#ebdc32", // yellow
-				"#3288bd", // blue
-				"#ea2210", // red
-				"#2d2d2d", // black
-				"#9461d4", // purple
-				"#29a628", // green
-				"#b1b1b1", // gray
-				"#9a5c04", // brown
-				"#ef88b3", // pink
-				"#ff8306"  // orange 
-		};
+		HashMap<Integer, String> textColorList = new HashMap<Integer, String>();
+		textColorList.put(0, "yellow");
+		textColorList.put(1, "blue");
+		textColorList.put(2, "red");
+		textColorList.put(3, "black");
+		textColorList.put(4, "purple");
+		textColorList.put(5, "green");
+		textColorList.put(6, "gray");
+		textColorList.put(7, "brown");
+		textColorList.put(8, "pink");
+		textColorList.put(9, "orange");
+		
+		HashMap<String, String> textColorCodeList = new HashMap<String, String>();
+		textColorCodeList.put("yellow", "#ebdc32");
+		textColorCodeList.put("blue", "#3288bd");
+		textColorCodeList.put("red", "#ea2210");
+		textColorCodeList.put("black", "#2d2d2d");
+		textColorCodeList.put("purple", "#9461d4");
+		textColorCodeList.put("green", "#29a628");
+		textColorCodeList.put("gray", "#b1b1b1");
+		textColorCodeList.put("brown", "#9a5c04");
+		textColorCodeList.put("pink", "#ef88b3");
+		textColorCodeList.put("orange", "#ff8306");
+
 		
 		Random rand = new Random();
-		this.text = colorTextList[rand.nextInt(colorTextList.length)];
-		this.colorCode = colorCodeList[rand.nextInt(colorCodeList.length)];
+		
+		int randInt = rand.nextInt(textColorList.size());
+		this.text = textColorList.get(randInt);
+		this.textColorCode = textColorCodeList.get(this.text);
+		
+		int randInt2 = rand.nextInt(textColorList.size());
+		while (randInt == randInt2) {
+			randInt2 = rand.nextInt(textColorList.size());
+		}
+		this.altcolorCode = textColorCodeList.get(textColorList.get(randInt2));
+		
 	}
 
-	
-	
+
+
 //	GETTERS & SETTERS
 	public String getText() {
 		return text;
@@ -52,12 +63,20 @@ public class ColorText {
 		this.text = text;
 	}
 
-	public String getColorCode() {
-		return colorCode;
+	public String getTextColorCode() {
+		return textColorCode;
 	}
 
-	public void setColorCode(String colorCode) {
-		this.colorCode = colorCode;
+	public void setTextColorCode(String textColorCode) {
+		this.textColorCode = textColorCode;
+	}
+	
+	public String getAltcolorCode() {
+		return altcolorCode;
+	}
+	
+	public void setAltcolorCode(String altcolorCode) {
+		this.altcolorCode = altcolorCode;
 	}
 	
 
