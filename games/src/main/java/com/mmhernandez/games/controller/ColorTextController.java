@@ -2,7 +2,6 @@ package com.mmhernandez.games.controller;
 
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.stream.IntStream;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -40,8 +39,17 @@ public class ColorTextController {
 			session.setAttribute("gameSet", gameSet);
 		}
 		
-		
-		
+		Random rand = new Random();
+		int randInt = rand.nextInt(10);
+		String order = "right";
+		if (randInt % 2 == 0) {
+			model.addAttribute("order", order);
+		}
+		else {
+			order = "left";
+			model.addAttribute("order", order);
+		}
+
 		return "colorText.jsp";
 	}
 	

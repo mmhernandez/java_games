@@ -6,25 +6,38 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Color Text</title>
+	<title>ColorText</title>
 	<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
 </head>
 <body class="m-5">
 
 	<section>
-		<h1 class="pt-3">Instructions</h1>
+		<h1 class="pt-3">ColorText</h1>
 		<p><c:out value="${instructions}"/></p>
-		<a href="/play" class="btn btn-primary">Play!</a>
-		<a href="/cancel" class="btn btn-secondary">Cancel</a>
+		<c:if test="${gameSet == null}">
+			<a href="/play" class="btn btn-outline-primary">Play!</a>
+		</c:if>
+		<c:if test="${gameSet != null}">
+			<a href="/cancel" class="btn btn-secondary">Cancel</a>
+		</c:if>
 	</section>
 	
 	<main class="mt-5">
-		<%-- <c:forEach var="colorText" items="${gameSet}">
-			<p><c:out value="${colorText.text} & ${colorText.colorCode}" /></p>
-			<p style="color: #${colorText.colorCode};" class="display-3 fw-bold"><c:out value="${colorText.text}" /></p>
-			</br>
-		</c:forEach> --%>
-		<p style="color: ${gameSet[0].colorCode};" class="display-3 fw-bold"><c:out value="${gameSet[0].text}" /></p>
+
+		<p style="color: ${gameSet[0].altColorCode};" class="display-3 fw-bold"><c:out value="${gameSet[0].text}" /></p>
+		<c:if test="${order == 'right'}">
+			<div class="d-flex gap-1">
+				<a href="#" class="btn" style="height: 50px; width: 50px; background-color: ${gameSet[0].altColorCode}"></a>
+				<a href="#" class="btn" style="height: 50px; width: 50px; background-color: ${gameSet[0].textColorCode}"></a>
+			</div>	
+		</c:if>
+		<c:if test="${order == 'left'}">
+			<div class="d-flex gap-1">
+				<a href="#" class="btn" style="height: 50px; width: 50px; background-color: ${gameSet[0].textColorCode}"></a>
+				<a href="#" class="btn" style="height: 50px; width: 50px; background-color: ${gameSet[0].altColorCode}"></a>
+			</div>	
+		</c:if>
+		
 	</main>
 	
 </body>

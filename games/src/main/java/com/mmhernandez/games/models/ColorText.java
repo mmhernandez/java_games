@@ -7,7 +7,7 @@ public class ColorText {
 	
 	private String text;
 	private String textColorCode;
-	private String altcolorCode;
+	private String altColorCode;
 	
 	
 	
@@ -48,7 +48,7 @@ public class ColorText {
 		while (randInt == randInt2) {
 			randInt2 = rand.nextInt(textColorList.size());
 		}
-		this.altcolorCode = textColorCodeList.get(textColorList.get(randInt2));
+		this.altColorCode = textColorCodeList.get(textColorList.get(randInt2));
 		
 	}
 
@@ -71,12 +71,12 @@ public class ColorText {
 		this.textColorCode = textColorCode;
 	}
 	
-	public String getAltcolorCode() {
-		return altcolorCode;
+	public String getAltColorCode() {
+		return altColorCode;
 	}
 	
-	public void setAltcolorCode(String altcolorCode) {
-		this.altcolorCode = altcolorCode;
+	public void setAltColorCode(String altcolorCode) {
+		this.altColorCode = altcolorCode;
 	}
 	
 
