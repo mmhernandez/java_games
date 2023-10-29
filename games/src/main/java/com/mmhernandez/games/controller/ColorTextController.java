@@ -21,9 +21,6 @@ public class ColorTextController {
 	
 	@GetMapping("/colortext")
 	public String startGame(Model model) {
-		String instructions = "Test";
-		model.addAttribute("instructions",instructions);
-		
 		return "colorText.jsp";
 	}
 

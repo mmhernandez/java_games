@@ -9,17 +9,25 @@
 	<title>ColorText</title>
 	<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
 </head>
-<body class="m-5">
+<body class="mx-auto w-50">
 
 	<section>
-		<h1 class="pt-3">ColorText</h1>
-		<p><c:out value="${instructions}"/></p>
-		<c:if test="${gameSet == null}">
-			<a href="/play" class="btn btn-outline-primary">Play!</a>
-		</c:if>
-		<c:if test="${gameSet != null}">
-			<a href="/cancel" class="btn btn-secondary">Cancel</a>
-		</c:if>
+		<div class="d-flex align-center">
+			<h1 class="pt-3">ColorText</h1>
+			<div>
+				<c:if test="${gameSet == null}">
+					<a href="/play" class="btn btn-outline-primary">Play!</a>
+				</c:if>
+				<c:if test="${gameSet != null}">
+					<a href="/cancel" class="btn btn-secondary">Cancel</a>
+				</c:if>
+			</div>
+		</div>
+		<p>
+			A game that challenges your brain. <span class="fw-bold">Pick the color block that matches the word spelled below.</span></br>
+			
+		</p>
+		
 	</section>
 	
 	<main class="mt-5">
