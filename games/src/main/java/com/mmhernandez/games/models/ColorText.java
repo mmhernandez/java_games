@@ -17,7 +17,7 @@ public class ColorText {
 		textColorList.put(0, "yellow");
 		textColorList.put(1, "blue");
 		textColorList.put(2, "red");
-		textColorList.put(3, "black");
+		textColorList.put(3, "white");
 		textColorList.put(4, "purple");
 		textColorList.put(5, "green");
 		textColorList.put(6, "gray");
@@ -29,7 +29,7 @@ public class ColorText {
 		textColorCodeList.put("yellow", "#ebdc32");
 		textColorCodeList.put("blue", "#3288bd");
 		textColorCodeList.put("red", "#ea2210");
-		textColorCodeList.put("black", "#2d2d2d");
+		textColorCodeList.put("white", "#f6f6f6");
 		textColorCodeList.put("purple", "#9461d4");
 		textColorCodeList.put("green", "#29a628");
 		textColorCodeList.put("gray", "#b1b1b1");
