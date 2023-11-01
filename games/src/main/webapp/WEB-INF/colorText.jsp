@@ -11,15 +11,16 @@
 </head>
 <body class="mx-auto w-50 bg-dark text-light">
 
-	<section>
-		<div class="d-flex justify-content-between align-items-center mt-5 mb-3">
-			<h1 class="pt-3 display-2">ColorText</h1>
+	<section class="text-center">
+		<div class="d-flex justify-content-end mt-4">
 			<c:if test="${gameSet != null}">
 				<a href="/cancel" class="btn btn-secondary">Cancel</a>
 			</c:if>
 		</div>
+		<h1 class="mt-5 mb-3 pt-3 display-2">ColorText</h1>
+			
 		<div>
-			<p>A game that challenges your brain. Guess all 10 colors before the time runs out!</p>
+			<p>A game that challenges your brain. Match each color correctly before the time runs out!</p>
 			<p class="fw-bold">Pick the color block that matches the word spelled below.</p>
 			<c:if test="${gameSet == null}">
 				<a href="/play" class="btn btn-light text-success">Play!</a>
@@ -28,8 +29,7 @@
 	</section>
 	
 	<main class="mt-5">
-
-		<div class="d-flex justify-content-between">
+		<div class="d-flex justify-content-center">
 			<div>
 				<p style="color: ${gameSet[0].altColorCode};" class="display-3 fw-bold"><c:out value="${gameSet[0].text}" /></p>
 				<c:if test="${order == 'right'}">
@@ -46,7 +46,7 @@
 				</c:if>
 			</div>
 			<div class="p-3">
-				<p class="fs-2 text-danger">00:30</p>
+				<p class="display-3 text-danger">00:10</p>
 			</div>
 		</div>
 	</main>
