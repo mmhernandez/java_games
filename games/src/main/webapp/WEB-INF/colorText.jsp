@@ -29,7 +29,7 @@
 	</section>
 	
 	<main class="mt-5">
-		<div class="d-flex justify-content-center">
+		<div class="d-flex justify-content-center gap-5">
 			<div>
 				<p style="color: ${gameSet[0].altColorCode};" class="display-3 fw-bold"><c:out value="${gameSet[0].text}" /></p>
 				<c:if test="${order == 'right'}">
